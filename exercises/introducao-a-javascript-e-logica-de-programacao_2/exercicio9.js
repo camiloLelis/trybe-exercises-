@@ -6,5 +6,3 @@ for (let index = 1; index <= ParaPercorrer; index++) {
     valorDividido.push(valorArray[index-1]/2);
 
 }
-
-console.log(valorDividido);
