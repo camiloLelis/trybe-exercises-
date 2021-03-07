@@ -76,14 +76,10 @@ let pegaTudo = document.querySelectorAll('div');
  
  for (let index = 2; index < pegaTudo.length; index++) {
     let element = pegaTudo[index];
-    console.log(element);
-    if (element.id === 'primeiroFilho' || element.id === 'segundoEUltimoFilhoDoFilho' || element.id === 'terceiroFilho' || element.id ==='quartoEUltimoFilho'){
+    if (element.id !== "elementoOndeVoceEsta" && element.id !== 'primeiroFilhoDoFilho' ){
         let x = pegaTudo[index].parentNode;
-        console.log(x);
-        let y= pegaTudo[index]
-        console.log(y);
+        let y= pegaTudo[index];
         x.removeChild(y);
-
     }
 
 } 
