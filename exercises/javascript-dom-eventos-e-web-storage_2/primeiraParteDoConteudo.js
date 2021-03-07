@@ -68,18 +68,23 @@ console.log(document.querySelectorAll('#paiDoPai')[0].id);
 let delet= document.querySelector('#elementoOndeVoceEsta');
 tudo.removeChild(delet); 
  */
-
+//let pegaTudo = SELECTOR => document.querySelectorAll('div');
 let pegaTudo = document.querySelectorAll('div');
-//console.log(pegaTudo[0]);
-//pegaTudo[0].removeChild(pegaTudo[1]);
-
-for (let index = 2; index < pegaTudo.length; index++) {
+//console.log(pegaTudo.length);
+//console.log(pegaTudo[2]);
+//pegaTudo[1].removeChild(pegaTudo[2]);
+ 
+ for (let index = 2; index < pegaTudo.length; index++) {
     let element = pegaTudo[index];
-    if (element.id != "elementoOndeVoceEsta" || element.id != "primeiroFilhoDoFilho"){
-        let x = pegaTudo[index];
-        pegaTudo[1].removeChild(pegaTudo[index]);
+    console.log(element);
+    if (element.id === 'primeiroFilho' || element.id === 'segundoEUltimoFilhoDoFilho' || element.id === 'terceiroFilho' || element.id ==='quartoEUltimoFilho'){
+        let x = pegaTudo[index].parentNode;
+        console.log(x);
+        let y= pegaTudo[index]
+        console.log(y);
+        x.removeChild(y);
 
     }
 
-}
+} 
 
