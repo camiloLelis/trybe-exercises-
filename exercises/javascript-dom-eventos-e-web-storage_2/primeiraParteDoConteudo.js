@@ -1,4 +1,4 @@
-let elementoOndeVoceEsta = document.querySelector("#elementoOndeVoceEsta");
+/* let elementoOndeVoceEsta = document.querySelector("#elementoOndeVoceEsta");
     console.log (elementoOndeVoceEsta);
 
 // segundo parte
@@ -60,14 +60,26 @@ console.log(acessarTerceiroFilho);
 
 //Remova todos os elementos da página, menos pai , elementoOndeVoceEsta e primeiroFilhoDoFilho .
 //let listaDeIds = document.querySelectorAll('#paiDoPai')[0].id;
- //console.log(document.querySelectorAll('#paiDoPai')[0].id);
-//console.log(listaDeIds[0].id);
+console.log(document.querySelectorAll('#paiDoPai')[0].id);
+//console.log(listaDeIds[0].id); */
 
-let tudo = document.querySelectorAll('#paiDoPai');
+//let tudo = document.querySelectorAll('body').length;
+/* let tudo = document.querySelector('#pai');
+let delet= document.querySelector('#elementoOndeVoceEsta');
+tudo.removeChild(delet); 
+ */
 
-for (let index = 0; index < tudo.length; index++) {
-    if (tudo[index].id === 'elementoOndeVoceEsta'){
-        tudo.removeChild(tudo[index].id);
+let pegaTudo = document.querySelectorAll('div');
+//console.log(pegaTudo[0]);
+//pegaTudo[0].removeChild(pegaTudo[1]);
+
+for (let index = 2; index < pegaTudo.length; index++) {
+    let element = pegaTudo[index];
+    if (element.id != "elementoOndeVoceEsta" || element.id != "primeiroFilhoDoFilho"){
+        let x = pegaTudo[index];
+        pegaTudo[1].removeChild(pegaTudo[index]);
+
     }
 
 }
+
