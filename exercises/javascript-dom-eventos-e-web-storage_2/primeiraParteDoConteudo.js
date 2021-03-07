@@ -57,3 +57,17 @@ criandoNovoElemento.id = 'filhoParaPrimeiroFilhoDoFilho';
 let acessarTerceiroFilho = document.querySelector('#filhoParaPrimeiroFilhoDoFilho').parentNode.nextElementSibling.nextElementSibling.parentNode.nextElementSibling;
 
 console.log(acessarTerceiroFilho);
+
+//Remova todos os elementos da página, menos pai , elementoOndeVoceEsta e primeiroFilhoDoFilho .
+//let listaDeIds = document.querySelectorAll('#paiDoPai')[0].id;
+ //console.log(document.querySelectorAll('#paiDoPai')[0].id);
+//console.log(listaDeIds[0].id);
+
+let tudo = document.querySelectorAll('#paiDoPai');
+
+for (let index = 0; index < tudo.length; index++) {
+    if (tudo[index].id === 'elementoOndeVoceEsta'){
+        tudo.removeChild(tudo[index].id);
+    }
+
+}
