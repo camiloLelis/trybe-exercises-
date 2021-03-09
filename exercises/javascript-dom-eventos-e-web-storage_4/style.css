@@ -4,5 +4,12 @@ header{
     background-color: blue;DS
     position: fixed;
     top: 0px;
+    
+}
+
+#text {
+    width: 500px;
+    border :solid ;
+    border-color: rgb(9, 85, 228);
 
 }
