@@ -107,10 +107,22 @@ const books = [
   
 } */
 // 6 Crie um array com o nome de todos os livros com mais de 60 anos de publicação.
-function oldBooks(){
+/* function oldBooks(){
     return books
     .filter((book) => book.releaseYear < 2021-59)
     .map((book) => book.name)
-}
+} */
+// Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três iniciais. Dica: cada inicial termina com um ponto.
+
+    function oldBooks() {
+        return books.
+        filter((book) => book.author.name[7] === '.')
+        .map((book) => book.author.name)
+    }
+
+
+
+
+
 
   console.log(oldBooks());
