@@ -85,17 +85,26 @@ const books = [
     },
   ];
   
-function oldBooks() {
+/* function oldBooks() {
     const currentYear = new Date().getFullYear();
     return books.filter((book) => (
       book.releaseYear < currentYear - 60
     )).sort((bookA, bookB) => bookA.releaseYear - bookB.releaseYear);
-  }
+  } */
 /*   function oldBooks() {
     const currentYear = new Date().getFullYear();
     return currentYear;
   }
  */
+// neste caso o ano de lançamento tem que ser menor que a data atual(currentYear)-60
 
+// 5 Crie um array em ordem alfabética apenas com os nomes de todas as pessoas autoras de ficção científica ou fantasia.
+
+function oldBooks() {
+    return books.filter((book) => {
+        return book.genre === 'Fantasia' || book.genre === 'Ficção Científica';
+    }).map((book) => book.author.name).sort();
+  
+}
 
   console.log(oldBooks());
