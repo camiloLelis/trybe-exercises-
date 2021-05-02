@@ -9,8 +9,6 @@ function checkDraw(bet, drawn) {
 
 const prizeDraw = (numberBet, callback) => {
   const generate = Math.floor((Math.random()*5)+1);
-  const check = callback(numberBet, generate);
-  // console.log(generate);
-  return ( check === true ) ? "Parabéns você ganhou" : "Tente novamente";
+  return callback(numberBet, generate) ? "Parabéns você ganhou" : "Tente novamente";
 }
-//console.log(prizeDraw(2, checkDraw));
+console.log(prizeDraw(3, checkDraw));
