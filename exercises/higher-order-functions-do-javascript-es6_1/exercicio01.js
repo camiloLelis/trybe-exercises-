@@ -1,7 +1,7 @@
 function hiredPerson(name) {
   return {
     nome: name,
-    email: `${name}@trybe.com`,
+    email: `${name.toLowerCase().split(' ').join('_')}@trybe.com`,
   }
 }
 
