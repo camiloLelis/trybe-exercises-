@@ -62,8 +62,21 @@ const books = [
   ];
   //console.log( books[0].author.name);
 
-  function authorBornIn1947() {
+ /*  function authorBornIn1947() {
     // escreva aqui o seu código
-    return books.find(({ author }) => author.birthYear === 1947).author.name;
-  }
-  console.log( authorBornIn1947() );
+    const { name } = books.find(({ author }) => author.birthYear === 1947).author;
+    return name;
+}
+  console.log( authorBornIn1947() ); */
+
+function smallerName() {
+  let nameBook;
+    // escreva aqui o seu código
+  const titleMinor = ({name}) => ( !nameBook || name.length < nameBook.length)? nameBook = name :null;
+    
+  books.forEach(titleMinor); 
+    // Variável nameBook que receberá o valor do menor nome;
+  return nameBook;
+}
+  console.log( smallerName() );
+  //console.log(books[0].name.length);
