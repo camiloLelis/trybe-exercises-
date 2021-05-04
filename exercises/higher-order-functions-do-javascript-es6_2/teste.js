@@ -81,13 +81,13 @@ const books = [
   console.log( smallerName() );
   //console.log(books[0].name.length); */
 
-  function getNamedBook() {
+ /*  function getNamedBook() {
     // escreva seu código aqui
     const {author, genre, id, name, releaseYear} = books
       .find(({name}) => name.length === 26);
       return {author, genre, id, name, releaseYear};
   }
-  console.log(getNamedBook());
+  console.log(getNamedBook()); */
 
   /*  author: {
     birthYear: 1948,
@@ -97,3 +97,10 @@ const books = [
   id: 1,
   name: 'As Crônicas de Gelo e Fogo',
   releaseYear: 1991, */
+
+  function booksOrderedByReleaseYearDesc() {
+    // escreva aqui seu código
+    return books.sort((a,b) => a-b);
+    
+  }
+console.log(booksOrderedByReleaseYearDesc());
