@@ -2,8 +2,8 @@
 const sum = require('./sum');
 
 describe('sum', () => {
-  test('4 plus 5 equals 9', () => {
-    expect(sum(4, 5)).toBe(9);
+  test('soma entre 5 e 4 igual a 9', () => {
+    expect(sum(4,5)).toBe(9);
   });
 
   test('throws an error when a string is passed', () => {
